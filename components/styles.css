@@ -1,0 +1,42 @@
+.burningText {
+  animation: burnText 1s ease-in-out infinite alternate;
+}
+
+@keyframes burnText {
+  0% {
+    color: rgba(255, 94, 0, 0.6); /* Culoarea textului mai închisă */
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.4); /* Umbra textului mai intensă */
+  }
+  100% {
+    color: rgba(255, 0, 0, 0.3); /* Culoarea textului mai deschisă */
+    text-shadow: 0 0 5px rgba(255, 111, 0, 0.1); /* Umbra textului mai puțin intensă */
+  }
+}
+.nav-link {
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: rgb(255, 119, 0);
+  transition: width 0.3s ease; /* Animatie de 0.3 secunde cu easing */
+}
+
+.nav-link:hover::after {
+  width: 100%; /* Se extinde la 100% la hover */
+}
+.light-effect {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 119, 0, 0.502); /* Portocaliu cu opacitate */
+  border-radius: 50%;
+  pointer-events: none; /* Nu afectează evenimentele de clic */
+  filter: blur(20px); /* Adăugăm un efect de blur */
+}

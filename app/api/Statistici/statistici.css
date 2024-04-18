@@ -1,0 +1,69 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.statistics-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.statistic {
+  width: 150px;
+}
+
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100px; /* Adjust width to make the circle larger */
+  height: 100px; /* Adjust height to make the circle larger */
+  padding: 20px; /* Adjust padding to create space between text and circle */
+  border-radius: 50%;
+  margin: 0 auto;
+  background-color: transparent;
+}
+
+.circle::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 4px solid rgb(255, 128, 0);
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.circle::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 4px solid orange; /* Modified to create a full circle */
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.statistic-value {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+}
+
+.statistic-label {
+  margin-top: 20px;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
