@@ -90,7 +90,6 @@ export default function EditTopicForm({
         placeholder="email"
       />
 
-      {/* Utilizăm elementul `select` pentru a permite utilizatorului să selecteze o programare */}
       <select
         onChange={(e) => setNewProgramare(e.target.value)}
         value={newProgramare}

@@ -23,7 +23,6 @@ const getTopics = async () => {
 export default async function TopicsList() {
   const { topics } = await getTopics();
 
-  // Split topics array into chunks of 3
   const chunkedTopics = [];
   for (let i = 0; i < topics.length; i += 3) {
     chunkedTopics.push(topics.slice(i, i + 3));
@@ -70,7 +69,6 @@ export default async function TopicsList() {
           ))}
         </div>
       ))}
-      {/* Separator între grupurile de liste */}
       {chunkedTopics.length > 0 && (
         <div className="my-8 border-t border-gray-300"></div>
       )}

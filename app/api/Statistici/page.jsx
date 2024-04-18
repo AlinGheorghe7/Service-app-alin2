@@ -1,18 +1,14 @@
 import React from "react";
-import "@/app/api/Statistici/statistici.css"; // Import CSS for styling
-
+import "@/app/api/Statistici/statistici.css";
 export default function StatisticsPage() {
-  // Define the values for each statistic
   const clients = 1200;
   const appointments = 800;
   const repairedCars = 500;
 
-  // Calculate the percentage completion for each statistic
   const clientPercentage = (clients / 2000) * 100;
   const appointmentsPercentage = (appointments / 1500) * 100;
   const repairedCarsPercentage = (repairedCars / 1000) * 100;
 
-  // Calculate the circle radius based on the length of the longest text
   const longestTextLength = Math.max(
     clients.toString().length,
     appointments.toString().length,
@@ -36,7 +32,6 @@ export default function StatisticsPage() {
       <div className="container">
         <h1 className="title ">Statistici</h1>
         <div className="statistics-container">
-          {/* Client Statistics */}
           <div className="statistic">
             <div
               className="circle"
@@ -50,7 +45,6 @@ export default function StatisticsPage() {
             <div className="statistic-label">Clienți</div>
           </div>
 
-          {/* Appointments Statistics */}
           <div className="statistic">
             <div
               className="circle"
@@ -64,7 +58,6 @@ export default function StatisticsPage() {
             <div className="statistic-label">Programări</div>
           </div>
 
-          {/* Repaired Cars Statistics */}
           <div className="statistic">
             <div
               className="circle"

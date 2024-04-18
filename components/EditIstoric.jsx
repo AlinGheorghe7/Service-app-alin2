@@ -78,7 +78,6 @@ export default function EditTopicForm({ id, primire, procesare, durata }) {
         placeholder="procesare"
       />
 
-      {/* Utilizăm elementul `select` pentru a permite utilizatorului să selecteze o programare */}
       <select
         onChange={(e) => setNewDurata(e.target.value)}
         value={newDurata}

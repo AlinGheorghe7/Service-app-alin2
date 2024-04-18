@@ -68,7 +68,6 @@ export default function AddTopic() {
           backgroundPosition: "center",
           Height: "100vh",
           overflowY: "auto",
-          // Puteți adăuga alte stiluri dorite aici
         }}
       ></div>
       {!showForm && (
@@ -104,7 +103,6 @@ export default function AddTopic() {
             placeholder="email"
           />
 
-          {/* Restul câmpurilor de input */}
           <button
             type="submit"
             className="bg-orange-700 font-bold text-white py-3 px-6 rounded-full"

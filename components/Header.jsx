@@ -14,7 +14,7 @@ export default function Header() {
   };
 
   const handleMouseLeave = () => {
-    setLightPosition({ x: -100, y: -100 }); // Poziționare în afara zonei vizibile
+    setLightPosition({ x: -100, y: -100 });
   };
 
   return (
@@ -59,17 +59,16 @@ export default function Header() {
           Statistici
         </Link>
       </nav>
-      {lightPosition.x >= 0 &&
-        lightPosition.y >= 0 && ( // Verificăm dacă mouse-ul este peste meniu
-          <div
-            ref={lightRef}
-            className="light-effect"
-            style={{
-              left: `${lightPosition.x}px`,
-              top: `${lightPosition.y}px`,
-            }}
-          ></div>
-        )}
+      {lightPosition.x >= 0 && lightPosition.y >= 0 && (
+        <div
+          ref={lightRef}
+          className="light-effect"
+          style={{
+            left: `${lightPosition.x}px`,
+            top: `${lightPosition.y}px`,
+          }}
+        ></div>
+      )}
     </div>
   );
 }

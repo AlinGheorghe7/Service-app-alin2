@@ -82,7 +82,6 @@ export default function EditTopicForm({
         overflowY: "auto",
         justifyContent: "center",
         alignItems: "center",
-        // Alte stiluri dorite pot fi adăugate aici
       }}
     >
       <form onSubmit={handleSubmit} className="flex flex-col gap-3">

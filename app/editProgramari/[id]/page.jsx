@@ -32,7 +32,6 @@ export default async function EditTopic({ params }) {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        // Alte stiluri dorite pot fi adăugate aici
       }}
     >
       <EditProgramari

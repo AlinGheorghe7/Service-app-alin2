@@ -9,7 +9,6 @@ export default function Istoric() {
         backgroundPosition: "center",
         Height: "100vh",
         overflowY: "auto",
-        // Puteți adăuga alte stiluri dorite aici
       }}
     >
       <Istorice></Istorice>

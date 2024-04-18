@@ -12,7 +12,6 @@ export default function Administrare() {
         backgroundPosition: "center",
         Height: "100vh",
         overflowY: "auto",
-        // Puteți adăuga alte stiluri dorite aici
       }}
     >
       <AddTopic></AddTopic>

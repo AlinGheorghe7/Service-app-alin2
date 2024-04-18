@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef } from "react";
-import "./styles.css"; // Importă fișierul CSS pentru animație
+import "./styles.css";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useGLTF, Stage, PresentationControls } from "@react-three/drei";
 
@@ -8,9 +8,8 @@ function Model(props) {
   const { scene } = useGLTF("/lambo.gltf");
   const group = useRef();
 
-  // Folosim useFrame pentru a actualiza constant rotatia modelului
   useFrame(() => {
-    group.current.rotation.y += 0.004; // Se rotește în jurul axei y cu un unghi mic
+    group.current.rotation.y += 0.004;
   });
 
   return (
@@ -26,7 +25,7 @@ export default function About() {
       <div
         className="flex h-screen justify-center"
         style={{
-          position: "relative", // Adaugăm poziția relativă pentru a poziționa modelul absolut
+          position: "relative",
           background: "url('/background.jpg')",
           backgroundSize: "cover",
         }}
@@ -55,18 +54,17 @@ export default function About() {
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
-            width: "100%", // Ajustăm lățimea Canvas-ului
-            height: "100%", // Ajustăm înălțimea Canvas-ului
+            width: "100%",
+            height: "100%",
           }}
         >
           <Canvas>
-            <ambientLight intensity={0.5} /> {/* Lumină ambientală */}
+            <ambientLight intensity={0.5} />
             <pointLight
               position={[3, 1, 1]}
               color="#ff9900"
               intensity={20}
             />{" "}
-            {/* Lumină portocalie */}
             <Stage environment={"city"} intensity={0.1}>
               <Model scale={[0.07, 0.07, 0.07]} />
             </Stage>
